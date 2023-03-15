@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(109, 50, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+}
+form{
+    text-align: center;
+    padding: 4rem;
+}
+form input{
+    padding: 0.6rem 0.7rem;
+    margin: 0.5rem;
+}
+form button{
+    padding: 0.5rem;
+}
+.login-page{
+    background-color: burlywood;
+    height: 100vh;
+}
+.register-page{
+    background-color: cadetblue;
+    height: 100vh;
+}

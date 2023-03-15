@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect} from 'react'
 import axios from 'axios';
+import { Ecommercecontext } from './App';
+import { Link } from 'react-router-dom';
 
 function Home() {
    
-   const[data,setData] = useState([])
-
+  const {data,setData} = useContext(Ecommercecontext)
    useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
       console.log(response.data);
@@ -17,7 +18,8 @@ function Home() {
         {data.map((element) => {
         return(
             <div key={element.id}>
-            <h1>{element.title}</h1>
+            <h1><Link>{element.title}</Link></h1>
+            <h3>{element.body}</h3>
             </div>
         )
       })}
